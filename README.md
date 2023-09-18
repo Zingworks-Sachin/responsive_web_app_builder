@@ -1,39 +1,59 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# sachin_s_application3
+### Table of contents
+- [System requirements](#system-requirements)
+- [Figma design guidelines for better UI accuracy](#figma-design-guideline-for-better-accuracy)
+- [Check the UI of the entire app](#app-navigations)
+- [Application structure](#project-structure)
+- [How to format your code?](#how-you-can-do-code-formatting)
+- [How you can improve code readability?](#how-you-can-improve-the-readability-of-code)
+- [Libraries and tools used](#libraries-and-tools-used)
+- [Support](#support)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+### System requirements
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Dart SDK Version 2.18.0 or greater.
+Flutter SDK Version 3.3.0 or greater.
 
-## Features
+### Figma design guidelines for better UI accuracy
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Read our guidelines to increase the accuracy of design-to-code conversion by optimizing Figma designs.
+https://docs.dhiwise.com/docs/Designguidelines/intro
 
-## Getting started
+### Check the UI of the entire app
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Check the UI of all the app screens from a single place by setting up the 'initialRoute'  to AppNavigation in the AppRoutes.dart file.
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+### Application structure
+After successful build, your application structure should look like this:
+                    
 ```
+.
+├── android                         - It contains files required to run the application on an Android platform.
+├── assets                          - It contains all images and fonts of your application.
+├── ios                             - It contains files required to run the application on an iOS platform.
+├── lib                             - Most important folder in the application, used to write most of the Dart code..
+    ├── main.dart                   - Starting point of the application
+    ├── core
+    │   ├── app_export.dart         - It contains commonly used file imports
+    │   ├── constants               - It contains static constant class file
+    │   └── utils                   - It contains common files and utilities of the application
+    ├── presentation                - It contains widgets of the screens
+    ├── routes                      - It contains all the routes of the application
+    └── theme                       - It contains app theme and decoration classes
+    └── widgets                     - It contains all custom widget classes
+```
+### How to format your code?
 
-## Additional information
+- if your code is not formatted then run following command in your terminal to format code
+  ```
+  dart format .
+  ```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### How you can improve code readability?
+
+Resolve the errors and warnings that are shown in the application.
+
+### Support
+
+If you have any problems or questions, go to our Discord channel, where we will help you as quickly as possible: https://discord.com/invite/rFMnCG5MZ7
